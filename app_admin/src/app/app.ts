@@ -1,11 +1,12 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { TripListing } from './trip-listing/trip-listing';
-import { JsonPipe }  from "@angular/common"
+import { JsonPipe }  from "@angular/common";
+import { Navbar } from './navbar/navbar';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, TripListing, JsonPipe],
+  standalone: true,
+  imports: [RouterOutlet, JsonPipe, Navbar],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
